@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.35.1",
+    "@neondatabase/serverless": "^1.0.2",
+    "@prisma/adapter-neon": "^6.19.0",
+    "@prisma/client": "^6.19.0",
     "@reduxjs/toolkit": "^2.10.1",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.553.0",
@@ -19,15 +22,18 @@
     "react-hot-toast": "^2.6.0",
     "react-redux": "^9.2.0",
     "recharts": "^3.4.1",
-    "swr": "^2.2.5"
+    "swr": "^2.2.5",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/ws": "^8.18.1",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
+    "prisma": "^6.19.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
