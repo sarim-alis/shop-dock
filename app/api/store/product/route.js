@@ -80,6 +80,6 @@ export async function GET (request) {
         return NextResponse.json({products})
     } catch (error) {
         console.error(error);
-        return NextResponse.json({ error: error.code || error.mesage }, { status:400 })
+        return NextResponse.json({ error: error.code || error.message }, { status:400 })
     } 
 }
