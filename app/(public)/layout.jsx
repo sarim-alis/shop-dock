@@ -30,7 +30,7 @@ export default function PublicLayout({ children }) {
         if (user) {
             dispatch(uploadCart({getToken}))
         }
-    },[user])
+    },[cartItems])
 
     return (
         <>
