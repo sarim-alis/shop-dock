@@ -22,7 +22,7 @@ export async function POST (request) {
         const category = formData.get("category")
         const images = formData.getAll("images")
 
-        if (!name || !description || !mrp || !price || !category || !images.length <1) {
+        if (!name || !description || !mrp || !price || !category || images.length < 1) {
             return NextResponse.json({error: "Missing product details"}, { status: 400})
         }
 

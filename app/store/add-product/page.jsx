@@ -49,7 +49,7 @@ export default function StoreAddProduct() {
             })
 
             const token    = await getToken()
-            const { data } = await axios.post('/api/store/productd', formData, { headers: { 'Authorization': `Bearer ${token}`}})
+            const { data } = await axios.post('/api/store/product', formData, { headers: { 'Authorization': `Bearer ${token}`}})
             toast.success(data.message)
 
             // Reset form.
