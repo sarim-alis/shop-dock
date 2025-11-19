@@ -15,7 +15,7 @@ export default function PublicLayout({ children }) {
     const { user }     = useUser()
     const { getToken}  = useAuth()
 
-    const { cartItems} = useSelector((state)=>state.cart)
+    const { cartItems = {} } = useSelector((state)=>state.cart || { cartItems: {}, total: 0 })
 
     useEffect(()=> {
         dispatch(fetchProducts({}))

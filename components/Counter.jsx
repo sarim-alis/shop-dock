@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Counter = ({ productId }) => {
 
-    const { cartItems } = useSelector(state => state.cart);
+    const { cartItems } = useSelector(state => state.cart || { cartItems: {}, total: 0 });
 
     const dispatch = useDispatch();
 

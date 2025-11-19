@@ -12,7 +12,7 @@ export default function Cart() {
 
     const currency = process.env.NEXT_PUBLIC_CURRENCY_SYMBOL || '$';
     
-    const { cartItems } = useSelector(state => state.cart);
+    const { cartItems = {} } = useSelector(state => state.cart || { cartItems: {}, total: 0 });
     const products = useSelector(state => state.product.list);
 
     const dispatch = useDispatch();
@@ -23,6 +23,8 @@ export default function Cart() {
     const createCartArray = () => {
         setTotalPrice(0);
         const cartArray = [];
+        // Safety check to ensure cartItems is defined and is an object
+        if (!cartItems || typeof cartItems !== 'object') return;
         for (const [key, value] of Object.entries(cartItems)) {
             const product = products.find(product => product.id === key);
             if (product) {
